@@ -79,4 +79,41 @@ public class MainaScript : MonoBehaviour
         GameplayController.instance.spawnNewMaina();
         GameplayController.instance.moveCamera();
     }
+
+    void RestartGame()
+    {
+        GameplayController.instance.RestartGame();
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (ignoreCollision)
+            return;
+        if (col.gameObject.CompareTag("Platform"))
+        {
+            Invoke("Landed", 2f);
+            ignoreCollision = true;
+        }
+        if (col.gameObject.CompareTag("Maina"))
+        {
+            Invoke("Landed", 2f);
+            ignoreCollision = true;
+        }
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (ignoreTrigger)
+            return;
+        if (col.CompareTag("GameOver"))
+        {
+            CancelInvoke("Landed");
+            gameOver = true;
+            ignoreTrigger = true;
+            Invoke("RestartGame",2f);
+        }
+
+
+    }
 } // Class
