@@ -20,6 +20,7 @@ public class MainaScript : MonoBehaviour
     private void Awake()
     {
         mainaBody = GetComponent<Rigidbody2D>();
+        mainaBody.gravityScale = 0f;
     }
 
     private void Start()
@@ -34,6 +35,7 @@ public class MainaScript : MonoBehaviour
 
     private void Update()
     {
+        MoveMaina();
     }
 
 
@@ -43,6 +45,16 @@ public class MainaScript : MonoBehaviour
         {
             Vector3 temp = transform.position;
             temp.x += moveSpeed * Time.deltaTime;
+
+            if (temp.x > maxX)
+            {
+                moveSpeed *= -1f;
+            }else if (temp.x < minX)
+            {
+                moveSpeed *= -1f;
+            }
+            
+            transform.position = temp;
         }
     }
 } // Class
