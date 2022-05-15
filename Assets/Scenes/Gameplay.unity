@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 1042684485}
   - component: {fileID: 1042684486}
   m_Layer: 0
-  m_Name: colombo_2
+  m_Name: Colombo BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -356,28 +356,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1630114437 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8430687773827397107, guid: 23ff6aaf873b1479ea84b050028e2935, type: 3}
-  m_PrefabInstance: {fileID: 8430687773272074102}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1630114438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8430687773827397104, guid: 23ff6aaf873b1479ea84b050028e2935, type: 3}
   m_PrefabInstance: {fileID: 8430687773272074102}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1630114439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1630114437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef6b7ba30beea4b59a8299b5ecbe3f73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1989832334821119673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -545,7 +528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8430687773827397107, guid: 23ff6aaf873b1479ea84b050028e2935, type: 3}
       propertyPath: m_Name
-      value: Box Spawner
+      value: Maina Spawner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23ff6aaf873b1479ea84b050028e2935, type: 3}
