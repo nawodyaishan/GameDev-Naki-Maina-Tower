@@ -31,6 +31,8 @@ public class MainaScript : MonoBehaviour
         {
             moveSpeed *= -1f;
         }
+
+        GameplayController.instance.currentMaina = this;
     }
 
     private void Update()
