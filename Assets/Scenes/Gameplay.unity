@@ -267,6 +267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3af73370ba04a9587fac625e4777aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainaSpawner: {fileID: 1630114439}
+  currentMaina: {fileID: 0}
+  cameraScript: {fileID: 519420033}
 --- !u!4 &912361157 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8243306387193925918, guid: d11ab620b2b1d477f980db63d2fc291d, type: 3}
@@ -361,6 +364,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8430687773827397104, guid: 23ff6aaf873b1479ea84b050028e2935, type: 3}
   m_PrefabInstance: {fileID: 8430687773272074102}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1630114439 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1630114439, guid: 23ff6aaf873b1479ea84b050028e2935, type: 3}
+  m_PrefabInstance: {fileID: 8430687773272074102}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6b7ba30beea4b59a8299b5ecbe3f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1989832334821119673
 PrefabInstance:
   m_ObjectHideFlags: 0

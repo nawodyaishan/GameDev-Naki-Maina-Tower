@@ -10,6 +10,8 @@ public class GameplayController : MonoBehaviour
     [HideInInspector] public MainaScript currentMaina;
 
     public CameraFollow cameraScript;
+    private int moveCount;
+    
 
     // Making Singleton Instance
     void Awake()
@@ -21,6 +23,7 @@ public class GameplayController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mainaSpawner.SpawnMaina();
     }
 
     // Update is called once per frame
