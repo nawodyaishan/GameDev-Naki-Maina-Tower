@@ -482,6 +482,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 519420032}
     m_Modifications:
+    - target: {fileID: 1630114439, guid: 23ff6aaf873b1479ea84b050028e2935, type: 3}
+      propertyPath: mainaPrefab
+      value: 
+      objectReference: {fileID: 2237670300666408680, guid: fdecba8dc1a54492d88f97c897ea279f, type: 3}
     - target: {fileID: 8430687773827397104, guid: 23ff6aaf873b1479ea84b050028e2935, type: 3}
       propertyPath: m_RootOrder
       value: 2

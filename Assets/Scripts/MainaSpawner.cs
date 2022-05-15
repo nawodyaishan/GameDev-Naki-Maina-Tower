@@ -1,15 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MainaSpawner : MonoBehaviour
 {
-    public GameObject MainaPrefab;
+    [SerializeField] GameObject mainaPrefab;
 
-    public void SpawnBox()
+    private void Start()
     {
-        GameObject mainaObject = Instantiate(MainaPrefab);
-        mainaObject.transform.position = transform.position;
+        SpawnMaina();
     }
+
+    public void SpawnMaina()
+    {
+        GameObject mainaObject = Instantiate(mainaPrefab);
+
+        Vector3 temp = transform.position;
+        temp.z = 0f;
+         
+        mainaObject.transform.position = temp;
+        
+    }
+    
+    
 
 } // Class
