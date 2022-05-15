@@ -59,4 +59,24 @@ public class MainaScript : MonoBehaviour
             transform.position = temp;
         }
     }
+
+    public void DropMaina()
+    {
+        canMove = false;
+        mainaBody.gravityScale = Random.Range(2, 4);
+    }
+
+    void Landed()
+    {
+        if (gameOver)
+        {
+            return;
+        }
+
+        ignoreCollision = true;
+        ignoreTrigger = true;
+
+        GameplayController.instance.spawnNewMaina();
+        GameplayController.instance.moveCamera();
+    }
 } // Class

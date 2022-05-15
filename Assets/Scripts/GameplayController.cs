@@ -11,7 +11,7 @@ public class GameplayController : MonoBehaviour
 
     public CameraFollow cameraScript;
     private int moveCount;
-    
+
 
     // Making Singleton Instance
     void Awake()
@@ -29,6 +29,42 @@ public class GameplayController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DetectInput();
+    }
+
+    void DetectInput()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            currentMaina.DropMaina();
+        }
+    }
+
+    public void spawnNewMaina()
+    {
+        Invoke("NewMaina", 2f);
+    }
+
+    void NewMaina()
+    {
+        mainaSpawner.SpawnMaina();
+    }
+
+    public void moveCamera()
+    {
+        moveCount++;
+        if (moveCount == 3)
+
+        {
+            moveCount = 0;
+            cameraScript.targetPos.y += 2f;
+        }
+    }
+
+    public void RestartGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }
 // Class
