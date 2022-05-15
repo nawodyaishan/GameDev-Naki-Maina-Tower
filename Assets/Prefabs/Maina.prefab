@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2237670300666408679}
   - component: {fileID: 2237670300666408676}
   - component: {fileID: 2237670300666408677}
+  - component: {fileID: -8314277943966755112}
   m_Layer: 6
   m_Name: Maina
   m_TagString: Maina
@@ -133,3 +134,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-8314277943966755112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2237670300666408680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5277a33f3c1542cd9211e7d7e56a7dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
