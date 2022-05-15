@@ -51,11 +51,12 @@ public class MainaScript : MonoBehaviour
             if (temp.x > maxX)
             {
                 moveSpeed *= -1f;
-            }else if (temp.x < minX)
+            }
+            else if (temp.x < minX)
             {
                 moveSpeed *= -1f;
             }
-            
+
             transform.position = temp;
         }
     }
@@ -76,8 +77,8 @@ public class MainaScript : MonoBehaviour
         ignoreCollision = true;
         ignoreTrigger = true;
 
-        GameplayController.instance.spawnNewMaina();
-        GameplayController.instance.moveCamera();
+        GameplayController.instance.SpawnNewMaina();
+        GameplayController.instance.MoveCamera();
     }
 
     void RestartGame()
@@ -94,12 +95,12 @@ public class MainaScript : MonoBehaviour
             Invoke("Landed", 2f);
             ignoreCollision = true;
         }
+
         if (col.gameObject.CompareTag("Maina"))
         {
             Invoke("Landed", 2f);
             ignoreCollision = true;
         }
-        
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -111,9 +112,7 @@ public class MainaScript : MonoBehaviour
             CancelInvoke("Landed");
             gameOver = true;
             ignoreTrigger = true;
-            Invoke("RestartGame",2f);
+            Invoke("RestartGame", 2f);
         }
-
-
     }
 } // Class

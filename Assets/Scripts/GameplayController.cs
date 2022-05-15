@@ -7,16 +7,17 @@ public class GameplayController : MonoBehaviour
     public static GameplayController instance;
 
     public MainaSpawner mainaSpawner;
+    
     [HideInInspector] public MainaScript currentMaina;
 
-    public CameraFollow cameraScript;
+    public CameraFollow cameraScript; 
+    
     private int moveCount;
-
 
     // Making Singleton Instance
     void Awake()
     {
-        if (!instance)
+        if (instance == null)
             instance = this;
     }
 
@@ -40,7 +41,7 @@ public class GameplayController : MonoBehaviour
         }
     }
 
-    public void spawnNewMaina()
+    public void SpawnNewMaina()
     {
         Invoke("NewMaina", 2f);
     }
@@ -50,14 +51,13 @@ public class GameplayController : MonoBehaviour
         mainaSpawner.SpawnMaina();
     }
 
-    public void moveCamera()
+    public void MoveCamera()
     {
         moveCount++;
         if (moveCount == 3)
-
         {
             moveCount = 0;
-            cameraScript.targetPos.y += 2f;
+           cameraScript.targetPos.y += 2f;
         }
     }
 
