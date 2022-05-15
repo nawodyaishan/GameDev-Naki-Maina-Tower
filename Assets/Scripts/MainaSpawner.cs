@@ -12,7 +12,7 @@ public class MainaSpawner : MonoBehaviour
         GameObject mainaObject = Instantiate(mainaPrefab);
 
         Vector3 temp = transform.position;
-        temp.z = 0f;
+        temp.z = 10f;
 
         mainaObject.transform.position = temp;
     }

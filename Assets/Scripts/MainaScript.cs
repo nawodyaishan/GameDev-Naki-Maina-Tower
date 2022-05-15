@@ -7,12 +7,14 @@ using Random = UnityEngine.Random;
 
 public class MainaScript : MonoBehaviour
 {
-    [SerializeField] private float minX = -2.09f;
-    [SerializeField] private float maxX = 2.09f;
+    private float minX = -2.09f;
+    private float maxX = 2.09f;
 
     private bool canMove;
     private float moveSpeed = 2f;
+    
     private Rigidbody2D mainaBody;
+    
     private bool gameOver;
     private bool ignoreCollision;
     private bool ignoreTrigger;
